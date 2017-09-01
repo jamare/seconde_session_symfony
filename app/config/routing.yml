@@ -1,0 +1,16 @@
+app_index:
+    path:     /index
+    defaults: { _controller: AppBundle:Album:index }
+
+app_view:
+    path:      /album/{id}
+    defaults:
+        _controller: AppBundle:Album:view
+    requirements:
+        id: \d+
+
+app_add:
+    path:     /add
+    defaults: { _controller: AppBundle:Album:add }
+
+

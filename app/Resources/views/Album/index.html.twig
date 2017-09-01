@@ -1,0 +1,21 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Accueil {% endblock %}
+
+
+{% block body %}
+
+    <h2>Accueil :</h2>
+    <hr />
+
+    {% for album in listAlbum %}
+
+        <div class="box_all_items">
+            <h2>{{ album.title }}</h2>
+            <a href="{{ path('app_view', {'id':album.id}) }}">En savoir plus ...</a>
+        </div>
+
+
+    {% endfor %}
+
+{% endblock %}
